@@ -19,16 +19,9 @@ class App extends Component {
 
   _callLoadAPI = () => {
     return fetch('http://118.219.54.216:8888/api/items')
-          .then(_response => _response.json())
-          .catch(err => console.log(err));
-    // return fetch(
-    //   'https://yts.am/api/v2/list_movies.json?sort_by=download_count'
-    // )
-    //   .then(_response => _response.json())
-    //   .then(_responseJson => _responseJson.data.movies)
-    //   .catch(err => console.log(err));
+      .then(_response => _response.json())
+      .catch(err => console.log(err));
   };
-
   _renderItems = () => {
     const Items = this.state.Items.map((item, index) => {
       return (
